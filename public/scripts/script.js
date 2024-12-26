@@ -1,12 +1,12 @@
 // Define an array of image objects with paths relative to the HTML file's location
 const carauselimages = [
-    { src: "public/images/FB_IMG_1.jpg", alt: "First Image" },
-    { src: "public/images/FB_IMG_2.jpg", alt: "Second Image" },
-    { src: "public/images/FB_IMG_3.jpg", alt: "Third Image" },
-    { src: "public/images/FB_IMG_4.jpg", alt: "Fourth Image" },
-    { src: "public/images/FB_IMG_5.jpg", alt: "Fifth Image" },
-    { src: "public/images/FB_IMG_6.jpg", alt: "Sixth Image" },
-    { src: "public/images/FB_IMG_7.jpg", alt: "Seventh Image" },
+    { src: "../images/FB_IMG_1.jpg", alt: "First Image" },
+    { src: "../images/FB_IMG_2.jpg", alt: "Second Image" },
+    { src: "../images/FB_IMG_3.jpg", alt: "Third Image" },
+    { src: "../images/FB_IMG_4.jpg", alt: "Fourth Image" },
+    { src: "../images/FB_IMG_5.jpg", alt: "Fifth Image" },
+    { src: "../images/FB_IMG_6.jpg", alt: "Sixth Image" },
+    { src: "../images/FB_IMG_7.jpg", alt: "Seventh Image" },
 ];
 
 // Function to update the image with a fade effect
