@@ -1,0 +1,100 @@
+:root {
+  --primary-color: #333;
+  --bg-color: #e0e0e0;
+  --touch: #d63d3d;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+.content {
+  margin-top: 10rem;
+  margin: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.art-description {
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px #0000001a;
+  padding: 1rem;
+  margin-top: 4rem;
+  cursor: pointer;
+  align-self: center;
+  max-width: 80%;
+}
+.description {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+.art-image {
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+}
+
+.art-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.art-title {
+  margin: 0;
+  font-size: 24px;
+  color: var(--touch);
+}
+
+.art-artist {
+  font-size: 18px;
+  color: #34495e;
+  margin-top: 5px;
+}
+
+.art-date,
+.art-medium,
+.art-dimensions,
+.art-price {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+.buy-link button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-top: 24px;
+  font-size: 20px;
+  background-color: var(--bg-color);
+  float: right;
+  border-radius: 20px;
+}
+
+@media (max-width: 780px) {
+  .content {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+  .art-description {
+    flex-direction: column;
+  }
+
+  .art-image {
+    max-width: 100%;
+    width: 100%;
+  }
+}

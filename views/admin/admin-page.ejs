@@ -1,0 +1,94 @@
+<%- include("header") -%>
+
+<main class="content">
+    <header class="inner-header">
+      <div class="container">
+        <p>Admin Dashboard</p>
+      </div>
+    </header>
+
+    <nav class="inner">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="#" class="tab-link active" data-tab="artworks"
+              >Artworks</a
+            >
+          </li>
+          <li>
+            <a href="#" class="tab-link" data-tab="exhibitions"
+              >Exhibitions</a
+            >
+          </li>
+          <li><a href="#" class="tab-link" data-tab="gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+      <div class="container">
+        <div id="artworks" class="tab-content active">
+          <div class="card">
+            <h2>Manage Artworks</h2>
+            <button class="btn" id="add-artwork">Add Artwork</button>
+            <input
+              type="text"
+              class="search-bar"
+              placeholder="Search artworks..."
+            />
+            <table>
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Title</th>
+                  <th>Artist</th>
+                  <th>Price</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="artworks-table-body">
+                <!-- Table rows will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="exhibitions" class="tab-content">
+          <div class="card">
+            <h2>Manage Exhibitions</h2>
+            <button class="btn" id="add-exhibition">Add Exhibition</button>
+            <input
+              type="text"
+              class="search-bar"
+              placeholder="Search exhibitions..."
+            />
+            <table>
+              <thead>
+                <tr>
+                  <th>Thumbnail</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="exhibitions-table-body">
+                <!-- Table rows will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="gallery" class="tab-content">
+          <div class="card">
+            <h2>Manage Gallery</h2>
+            <button class="btn" id="add-image">Add Image</button>
+            <div id="gallery-grid" class="gallery-grid">
+              <!-- Gallery items will be dynamically added here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <%- include("footer") -%>

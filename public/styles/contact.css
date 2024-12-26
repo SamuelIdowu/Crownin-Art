@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #333;
+    --bg-color: #e0e0e0;
+    --touch: #d63d3d;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+.contact-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    margin-top: 9rem;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--touch);
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: var(--touch);
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    width: 35%;
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    padding: 2rem;
+    width: 65%;
+}
+
+.contact-form, .newsletter-signup {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #333;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #444;
+}
+
+.newsletter-signup {
+    border-top: 1px solid #ddd;
+    padding-top: 2rem;
+}
+
+.newsletter-signup h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.newsletter-signup p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.newsletter-form .form-group {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-section{
+        margin-top: 7rem;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info,
+    .form-container {
+        width: 100%;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form .form-group {
+        margin-bottom: 1rem;
+    }
+}

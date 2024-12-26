@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #333;
+    --bg-color: #e0e0e0;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+   
+
+main{
+    margin-top: 10rem;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+.gallery img {
+    width: 25%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  main{
+    margin-top: 5rem;
+  }
+  .gallery img {
+    width: 40%;
+}
+
+}
