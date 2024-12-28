@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     newImg.style.display = "block"; // Make the image visible
     galleryContainer.appendChild(newImg); // Append the image to the gallery
   });
-
-  alert("hello")
 });
 
 

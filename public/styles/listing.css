@@ -30,7 +30,7 @@ body {
   margin-top: 4rem;
   cursor: pointer;
   align-self: center;
-  max-width: 80%;
+  width: 80%;
 }
 .description {
   background-color: #f9f9f9;
@@ -91,6 +91,7 @@ body {
   }
   .art-description {
     flex-direction: column;
+    width: 100%;
   }
 
   .art-image {

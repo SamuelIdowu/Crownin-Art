@@ -1,19 +1,19 @@
 // Data for the exhibitions
 const exhibitions = [
   {
-    videoSrc: "/public/videos/VID3.mp4",
+    videoSrc: "videos/VID3.mp4",
     title: "Art Through the Ages",
     description:
       "Explore the evolution of art through various ages, capturing the essence of creativity and expression   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam unde doloribus veritatis maiores blanditiis tenetur obcaecati ipsam, ipsa molestiae debitis distinctio deserunt perferendis ratione, quod, cumque quidem animi in quisquam",
   },
   {
-    videoSrc: "/public/videos/VID2.mp4",
+    videoSrc: "videos/VID2.mp4",
     title: "Modern Art Movements",
     description:
       "Delve into the bold and daring world of modern art, breaking boundaries and challenging norms    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam unde doloribus veritatis maiores blanditiis tenetur obcaecati ipsam, ipsa molestiae debitis distinctio deserunt perferendis ratione, quod, cumque quidem animi in quisquam.",
   },
   {
-    videoSrc: "/public/videos/VID1.mp4",
+    videoSrc: "videos/VID1.mp4",
     title: "Nature in Art",
     description:
       "Discover how nature has been a timeless muse for artists across generations    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam unde doloribus veritatis maiores blanditiis tenetur obcaecati ipsam, ipsa molestiae debitis distinctio deserunt perferendis ratione, quod, cumque quidem animi in quisquam",

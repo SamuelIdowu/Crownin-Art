@@ -3,7 +3,7 @@
 // Array of artwork objects
 const artworks = [
   {
-    imageUrl: "/public/images/FB_IMG_1.jpg",
+    imageUrl: "images/FB_IMG_1.jpg",
     title: "The Starry Night",
     artist: "Vincent van Gogh",
     date: "1889",
@@ -14,7 +14,7 @@ const artworks = [
       "The Starry Night is an oil on canvas painting by Dutch Post-Impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an idealized village.",
   },
   {
-    imageUrl: "/public/images/FB_IMG_2.jpg",
+    imageUrl: "images/FB_IMG_2.jpg",
     title: "Mona Lisa",
     artist: "Leonardo da Vinci",
     date: "1503–1506",

@@ -11,6 +11,7 @@ body {
 }
 body{
     background-color: var(--bg-color);
+    line-height: 1.6;
 }
 .nav{
     position: absolute;
@@ -112,7 +113,7 @@ footer {
     margin: 1rem;
     visibility: hidden;
     float: right;
-    margin-top: -2rem;
+    /* margin-top: -2.5rem; */
 }
 
 .menu-icon span {
