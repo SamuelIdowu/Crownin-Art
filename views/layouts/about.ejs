@@ -1,20 +1,46 @@
-<%- include("header") -%>
-
-<main class="content">
-    <div class="text-content">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/effects.css" />
+  </head>
+  <body>
+    <%- include("../partials/header") -%>
+    <main class="content">
+      <div class="text-content">
         <div class="subtitle">MEET THE MUSE</div>
         <h1 class="heading">Integrity in coverage, flexibility in writing</h1>
         <p class="text">
-            My love affair with written media started very early; growing up in the countryside does that to a person. As a kid, when there's no cable TV, you either play outside or read. I chose the latter. Starting with books and newspaper comics, I ended up reading papers from the front page to the last page, and tried my hand at writing for the school paper.
+          My love affair with written media started very early; growing up in
+          the countryside does that to a person. As a kid, when there's no cable
+          TV, you either play outside or read. I chose the latter. Starting with
+          books and newspaper comics, I ended up reading papers from the front
+          page to the last page, and tried my hand at writing for the school
+          paper.
         </p>
         <p class="text">
-            By the time I finished school I knew this is what I wanted to do for a living. I wrote for small publications while working on my bachelor, and got freelance gigs while doing my master's. The rest is history.
+          By the time I finished school I knew this is what I wanted to do for a
+          living. I wrote for small publications while working on my bachelor,
+          and got freelance gigs while doing my master's. The rest is history.
         </p>
-        <a href="/contact.html" class="cta">Get in touch</a>
-    </div>
-    <div class="image-container">
-        <img src="/public/images/FB_IMG_1.jpg" alt="Writer working at desk" class="image">
-    </div>
-</main>
+        <a href="/contact" class="cta">Get in touch</a>
+      </div>
+      <div class="image-container">
+        <img
+          src="/images/FB_IMG_1.jpg"
+          alt="Writer working at desk"
+          class="image"
+        />
+      </div>
+    </main>
 
-<%- include("footer") -%>
+    <script src="scripts/script.js"></script>
+
+    <%- include("../partials/footer") -%>
+  </body>
+</html>
+

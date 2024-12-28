@@ -15,6 +15,30 @@ app.get("/", (req, res) => {
     res.render("layouts/home");
 });
 
+app.get("/about", (req, res) => {
+    res.render("layouts/about");
+});
+
+app.get("/contact", (req, res) => {
+    res.render("layouts/contact");
+});
+
+app.get("/catalogue", (req, res) => {
+    res.render("layouts/catalogue");
+});
+
+app.get("/listings", (req, res) => {
+    res.render("layouts/listings");
+});
+
+app.get("/exhibitions", (req, res) => {
+    res.render("layouts/exhibitions");
+});
+
+app.get("/gallery", (req, res) => {
+    res.render("layouts/gallery");
+});
+
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });

@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const artworks = [
     {
       id: 1,
-      image: "../public/images/FB_IMG_1.jpg",
+      image: "images/FB_IMG_1.jpg",
       title: "The Starry Night",
       artist: "Vincent van Gogh",
       price: "$100",
     },
     {
       id: 2,
-      image: "../public/images/FB_IMG_2.jpg",
+      image: "images/FB_IMG_2.jpg",
       title: "Mona Lisa",
       artist: "Leonardo da Vinci",
       price: "$100",
@@ -23,17 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const exhibitions = [
     {
       id: 1,
-      image: "../public/images/FB_IMG_7.jpg",
+      image: "images/FB_IMG_7.jpg",
       title: "Art Through the Ages",
       description: "Explore the evolution of art through various ages...",
     },
   ];
 
   const galleryImages = [
-    { id: 1, image: "../public/images/FB_IMG_3.jpg", alt: "Gallery Image 1" },
-    { id: 2, image: "../public/images/FB_IMG_4.jpg", alt: "Gallery Image 2" },
-    { id: 3, image: "../public/images/FB_IMG_5.jpg", alt: "Gallery Image 3" },
-    { id: 4, image: "../public/images/FB_IMG_6.jpg", alt: "Gallery Image 4" },
+    { id: 1, image: "images/FB_IMG_3.jpg", alt: "Gallery Image 1" },
+    { id: 2, image: "images/FB_IMG_4.jpg", alt: "Gallery Image 2" },
+    { id: 3, image: "images/FB_IMG_5.jpg", alt: "Gallery Image 3" },
+    { id: 4, image: "images/FB_IMG_6.jpg", alt: "Gallery Image 4" },
   ];
 
   // Tab switching functionality

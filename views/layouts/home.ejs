@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Crownin Artistry</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/effects.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/effects.css" />
+  </head>
+  <body>
     <div class="overlay">
-        <div class="background-carousel">
-            <img id="imgg" src="" alt="bg" />
-        </div>
-        <div class="nav">
-            <header>
-                <div class="logo">
-                    <a href="home.ejs">CROWNIN ARTISTRY</a>
-                </div>
-                <nav class="glass-effect">
-                    <ul>
-                        <li><a href="about.ejs">ABOUT</a></li>
-                        <li><a href="gallery.ejs">GALLERY</a></li>
-                        <li><a href="catalogue.ejs">CATALOGUE</a></li>
-                        <li><a href="listing.ejs">LISTINGS</a></li>
-                        <li><a href="exibitions.ejs">EXHIBITIONS</a></li>
-                        <li><a href="contact.ejs">CONTACT</a></li>
-                    </ul>
-                </nav>
-                <div class="menu-icon" onclick="this.classList.toggle('open')">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </header>
-        </div>
-        
-        <main>
-            <h1 class="typing">Welcome to Crownin Artistry</h1>
-            <p class="fade-in">
-                where imagination meets the canvas! Dive into a world of color and
-                creativity. Here, every stroke tells a story, and each piece is a
-                crown-worthy masterpiece. Ready to be inspired? Let’s paint some
-                magic!
-            </p>
-            <a href="listing.html" class="buy">BUY ART</a>
-        </main>
+      <div class="background-carousel">
+        <img id="imgg" src="" alt="bg" />
+      </div>
+      <div class="nav">
+        <header>
+          <div class="logo">
+            <a href="/">CROWNIN ARTISTRY</a>
+          </div>
+          <nav class="glass-effect">
+            <ul>
+              <li><a href="/about">ABOUT</a></li>
+              <li><a href="/gallery">GALLERY</a></li>
+              <li><a href="/catalogue">CATALOGUE</a></li>
+              <li><a href="/listings">LISTINGS</a></li>
+              <li><a href="/exhibitions">EXHIBITIONS</a></li>
+              <li><a href="/contact">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="menu-icon" onclick="this.classList.toggle('open')">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="sidebar" id="sidebar">
+            <ul>
+              <li><a href="/about">ABOUT</a></li>
+              <li><a href="/gallery">GALLERY</a></li>
+              <li><a href="/catalogue">CATALOGUE</a></li>
+              <li><a href="/listings">LISTINGS</a></li>
+              <li><a href="/exhibitions">EXHIBITIONS</a></li>
+              <li><a href="/contact">CONTACT</a></li>
+            </ul>
+          </div>
+        </header>
+      </div>
+
+      <main>
+        <h1 class="typing">Welcome to Crownin Artistry</h1>
+        <p class="fade-in">
+          where imagination meets the canvas! Dive into a world of color and
+          creativity. Here, every stroke tells a story, and each piece is a
+          crown-worthy masterpiece. Ready to be inspired? Let’s paint some
+          magic!
+        </p>
+        <a href="/listings" class="buy">BUY ART</a>
+      </main>
     </div>
 
+    <script src="scripts/navBar.js"></script>
     <script src="scripts/script.js"></script>
-
-</body>
+  </body>
 </html>
