@@ -123,19 +123,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add event listeners for add buttons
   document.getElementById("add-artwork").addEventListener("click", function () {
     alert("Add artwork functionality to be implemented");
-    window.location.href = "../admin/post.html";
+    window.location.href = "/post";
   });
 
   document
     .getElementById("add-exhibition")
     .addEventListener("click", function () {
       alert("Add exhibition functionality to be implemented");
-      window.location.href = "../admin/post.html";
+      window.location.href = "/post";
     });
 
   document.getElementById("add-image").addEventListener("click", function () {
     alert("Add image functionality to be implemented");
-    window.location.href = "../admin/post.html";
+    window.location.href = "/post";
   });
 
   // Add event listeners for edit and delete buttons
