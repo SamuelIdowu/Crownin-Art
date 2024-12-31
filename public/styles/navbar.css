@@ -135,13 +135,32 @@ footer {
     text-align: center;
     position: fixed;
     left: -250px;
-    transition: left .5s ease;
+    transition: left 0.5s ease 0.3s; /* Add delay to the transition */
     z-index: 1000;
 }
 .sidebar.visible {
     display: block;
-    transition: left .5s ease;
     left: 0;
+    animation: slideIn 0.5s forwards; /* Add slide-in animation */
+}
+@keyframes slideIn {
+    from {
+        left: -250px;
+    }
+    to {
+        left: 0;
+    }
+}
+.sidebar.hidden {
+    animation: slideOut 0.5s forwards; /* Add slide-out animation */
+}
+@keyframes slideOut {
+    from {
+        left: 0;
+    }
+    to {
+        left: -250px;
+    }
 }
 .sidebar ul li a{
     text-decoration: none;

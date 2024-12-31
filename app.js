@@ -40,6 +40,18 @@ app.get("/gallery", (req, res) => {
     res.render("layouts/gallery");
 });
 
+app.get("/login", (req, res) => {
+    res.render("admin/login");
+});
+
+app.get("/admin-page", (req, res) => {
+    res.render("admin/admin-page");
+});
+
+app.get("/post", (req, res) => {
+    res.render("admin/post");
+});
+
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });

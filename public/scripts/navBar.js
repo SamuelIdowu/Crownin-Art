@@ -20,7 +20,15 @@ links.forEach(link => {
 
 // Add a click event listener to the menu icon
 menuIcon.addEventListener('click', () => {
+  sidebar.classList.toggle('hidden');
   sidebar.classList.toggle('visible');
 
   menuIcon.classList.toggle('open');
+  
+  // Add slide-out animation
+  if (sidebar.classList.contains('hidden')) {
+    sidebar.style.animation = 'slideOut 0.5s forwards';
+  } else {
+    sidebar.style.animation = 'slideIn 0.5s forwards';
+  }
 });
