@@ -16,8 +16,7 @@ body {
   margin-top: 10rem;
   margin: 5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 .art-description {

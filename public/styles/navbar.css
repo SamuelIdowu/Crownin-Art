@@ -8,14 +8,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
+}       
 body{
     background-color: var(--bg-color);
     line-height: 1.6;
 }
 .nav{
-    position: absolute;
-    /* margin-bottom: 2rem; */
+    position: relative;
     top: 0;
     width: 100%;
     background-color: var(--bg-color);
@@ -221,5 +220,8 @@ ul li {
     .footer .socials{
         width: 100vw;
         font-size: 14px;
+    }
+    .nav{
+        position: absolute;
     }
 }

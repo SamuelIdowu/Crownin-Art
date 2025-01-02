@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exhibitions</title>
     <link rel="stylesheet" href="styles/exhibitions.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/effects.css" />
-</head>
-<body>
+  </head>
+  <body>
+    <%- include("../partials/header") -%>
 
-<%- include("../partials/header") -%>
+    <main class="content">
+      <div class="exhibitions" id="exhibitions"></div>
+    </main>
 
-<main class="content">
-    <div class="exhibitions" id="exhibitions">
-      
-    </div>
-
-  </main>
-
-  <script src="exhibitionTemplate.js"></script>
-  <script src="scripts/script.js"></script>
-</body>
+    <script src="exhibitionTemplate.js"></script>
+    <script src="scripts/script.js"></script>
+    <%- include("../partials/footer") -%>
+  </body>
 </html>
-
-<%- include("../partials/footer") -%>

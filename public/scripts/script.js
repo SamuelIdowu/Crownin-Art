@@ -193,7 +193,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //Login Page
 
-
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     

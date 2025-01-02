@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalogue</title>
     <link rel="stylesheet" href="styles/catalogue.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/effects.css" />
-</head>
-<body>
+  </head>
+  <body>
+    <%- include("../partials/header") -%>
 
-<%- include("../partials/header") -%>
+    <main class="content">
+      <div id="art-gallery" class="art-gallery"></div>
+    </main>
 
-<main class="content">
+    <script src="catalogueTemplate.js"></script>
+    <script src="scripts/script.js"></script>
 
-    <div id="art-gallery" class="art-gallery">
-
-    </div>
-   
-  </main>
-
-  <script src="catalogueTemplate.js"></script>
-  <script src="scripts/script.js"></script>
-
-  <%- include("../partials/footer") -%>
-</body>
+    <%- include("../partials/footer") -%>
+  </body>
 </html>
-

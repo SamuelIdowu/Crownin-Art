@@ -52,6 +52,16 @@ app.get("/post", (req, res) => {
     res.render("admin/post");
 });
 
+app.post('/submit-form', (req, res) => {
+    const catalogueArtistName = req.body.catalogueartistname;
+    const catalogueTitle = req.body.cataloguetitle;
+    const catalogue = req.body.input2;
+    // const catalogueTitle = req.body.input2;
+    // const catalogueTitle = req.body.input2;
+    console.log(`Input 1: ${input1}, Input 2: ${input2}`);
+    res.send('Form submitted successfully!');
+});
+
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });
