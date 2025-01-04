@@ -36,7 +36,12 @@
         </div>
 
         <div class="form-container">
-          <form class="contact-form" id="contactForm">
+          <form
+            action="/send-email"
+            method="POST"
+            class="contact-form"
+            id="contactForm"
+          >
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required />

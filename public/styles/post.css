@@ -15,7 +15,6 @@ body {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    margin-top: 12rem;
 }
 
 form {
@@ -135,6 +134,7 @@ small {
 .submit-btn {
     width: 100%;
     padding: 12px;
+    margin-top: 12px;
     background: #6b7280;
     color: white;
     border: none;

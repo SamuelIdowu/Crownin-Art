@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const path = require("path");
+const nodemailer = require("nodemailer")
 
 const app = express();
 const port = 3000;
@@ -52,16 +53,55 @@ app.get("/post", (req, res) => {
     res.render("admin/post");
 });
 
-app.post('/submit-form', (req, res) => {
-    const catalogueArtistName = req.body.catalogueartistname;
-    const catalogueTitle = req.body.cataloguetitle;
-    const catalogue = req.body.input2;
-    // const catalogueTitle = req.body.input2;
-    // const catalogueTitle = req.body.input2;
-    console.log(`Input 1: ${input1}, Input 2: ${input2}`);
+app.post('/artwork-post', (req, res) => {
+    const { ArtistName, price, date, medium, title, dim, artworkDescription } = req.body;
+  
     res.send('Form submitted successfully!');
 });
+app.post('/gallery-post')
 
-app.listen(port, () => {
+
+//contact form submisstion
+app.post('/send-email', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    // Create a transporter
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, // use SSL/TLS
+      service: "Gmail",
+      auth: {
+        user: 'samuelidowu689@gmail.com',
+        pass: 'luwnqoxqnzzzpypz',
+      },
+    });
+    
+  
+    // Define email options
+    const mailOptions = {
+      from: email,
+      to: 'thenasis2@gmail.com',
+      subject: 'New message from your website',
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    };
+  
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.redirect("/contact");
+        alert("Error Sending Message, Please Retry");
+      } else {
+        alert("Message Sent Thank You");
+        console.log('Email sent: ' + info.response);
+        res.redirect("/contact");
+      }
+    });
+  });
+
+
+
+  app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });

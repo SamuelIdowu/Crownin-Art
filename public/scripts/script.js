@@ -39,27 +39,7 @@ setInterval(() => {
 }, 5000);
 
 
-// contact
-
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    };
-
-    // Here you would typically send the formData to your server
-    console.log('Form submitted:', formData);
-    
-    // Show success message
-    alert('Thank you for your message! We will get back to you soon.');
-    
-    // Reset form
-    this.reset();
-});
-
+//news letter
 document.getElementById('newsletterForm').addEventListener('submit', function(e) {
     e.preventDefault();
     

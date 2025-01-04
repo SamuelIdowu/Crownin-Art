@@ -7,184 +7,216 @@
     <link rel="stylesheet" href="styles/post.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/effects.css" />
-    </head>
-    <body>
-
+  </head>
+  <body>
     <%- include("../partials/header") -%>
 
-  <div class="container">
-    <h2>Catalogue</h2>
-    <form id="catalogue-form" action="/catalogue" method="POST"></form>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="artist-name">Artist name</label>
-        <input type="text" id="artist-name" name="catalogueartistName" required />
-      </div> 
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" required />
-      </div>
+    <!-- <div class="container">
+      <h2>Catalogue</h2>
+      <form id="catalogue-form" action="/artwork-post" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="artist-name">Artist name</label>
+            <input
+              type="text"
+              id="artist-name"
+              name="catalogueArtistName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              placeholder="MM/DD/YYYY"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="medium">Medium</label>
+            <input type="text" id="medium" name="medium" required />
+          </div>
+          <div class="form-group">
+            <label for="medium">Dimensions</label>
+            <input type="text" id="dim" name="dim" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="last-name">Description</label>
+            <textarea
+              name="gallery-description"
+              id="gallery-description"
+              cols="90"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-group upload-section">
+          <label>Upload the Photo of Artwork</label>
+          <div class="upload-area" id="drop-zone">
+            <input
+              type="file"
+              id="file-input"
+              accept="image/*"
+              multiple
+              required
+            />
+            <button type="button" class="browse-btn">Browse Files</button>
+            <p>Drag and drop files here</p>
+          </div>
+          <div id="file-list"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Post to catalogue</button>
+      </form>
+    </div> -->
+
+    <div class="container listing">
+      <h2>Artworl</h2>
+      <form id="artwork-form" action="/send-artwork" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="artist-name">Artist name</label>
+            <input type="text" id="artist-name" name="artistName" required />
+          </div>
+          <div class="form-group">
+            <label for="title">Price</label>
+            <input type="number" id="price" name="price" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              placeholder="MM/DD/YYYY"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="medium">Medium</label>
+            <input type="text" id="medium" name="medium" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="medium">Title</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+          <div class="form-group">
+            <label for="medium">Dimensions</label>
+            <input type="text" id="dim" name="dim" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="last-name">Description</label>
+            <textarea
+              name="artworkDescription"
+              id="description"
+              cols="90"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-group upload-section">
+            <label>Upload the Photo of Artwork</label>
+            <div class="upload-area" id="drop-zone">
+              <input
+                type="file"
+                id="file-input"
+                accept="image/*"
+                multiple
+                required
+              />
+              <button type="button" class="browse-btn">Browse Files</button>
+              <p>Drag and drop files here</p>
+            </div>
+            <div id="file-list"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Post to Listings</button>
+        <button type="submit" class="submit-btn">Post to catalogue</button>
+      </form>
     </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="date">Date</label>
-        <input
-          type="date"
-          id="date"
-          name="date"
-          placeholder="MM/DD/YYYY"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <label for="medium">Medium</label>
-        <input type="text" id="medium" name="medium" required />
-      </div>
-      <div class="form-group">
-        <label for="medium">Dimensions</label>
-        <input type="text" id="dim" name="dim" required />
-      </div>
+    <div class="container gallery">
+      <form action="/post" method="POST">
+        <h2>Gallery</h2>
+        <div class="form-group upload-section">
+          <label>Upload the Photo of Artwork</label>
+          <div class="upload-area" id="drop-zone">
+            <input
+              type="file"
+              id="file-input"
+              accept="image/*"
+              multiple
+              required
+            />
+            <button type="button" class="browse-btn">Browse Files</button>
+            <p>Drag and drop files here</p>
+          </div>
+          <div id="file-list"></div>
+          <button type="submit" class="submit-btn">Post to Gallery</button>
+        </div>
+      </form>
+    </div>
+    <div class="container gallery">
+      <form action="/post" id="exhibitions-form" method="POST">
+        <h2>Video Exhibitions</h2>
+        <div class="form-group upload-section">
+          <label>Upload the Video of Artwork</label>
+          <div class="upload-area" id="drop-zone">
+            <input
+              type="file"
+              id="file-input"
+              accept="video/*"
+              multiple
+              required
+            />
+            <button type="button" class="browse-btn">Browse Files</button>
+            <p>Drag and drop files here</p>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="last-name">Description</label>
+              <textarea
+                name="description"
+                id="description"
+                cols="90"
+                rows="10"
+              ></textarea>
+            </div>
+          </div>
+          <div id="file-list"></div>
+          <button type="submit" class="submit-btn">Post to Exhibitions</button>
+        </div>
+      </form>
     </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="last-name">Description</label>
-        <textarea
-          name="gallery-description"
-          id="gallery-description"
-          cols="90"
-          rows="10"
-        ></textarea>
-      </div>
+    <div class="post">
+      <a href="/admin-page">Admin Page</a>
     </div>
 
-    <div class="form-group upload-section">
-      <label>Upload the Photo of Artwork</label>
-      <div class="upload-area" id="drop-zone">
-        <input type="file" id="file-input" accept="image/*" multiple required />
-        <button type="button" class="browse-btn">Browse Files</button>
-        <p>Drag and drop files here</p>
-      </div>
-      <div id="file-list"></div>
-    </div>
+    <script src="scripts/script.js"></script>
 
-    <button type="submit" class="submit-btn">Post to catalogue</button>
-  </form>
-</div>
-
-<div class="container listing">
-  <h2>Listings</h2>
-  <form id="vaccination-form">
-    <div class="form-row">
-      <div class="form-group">
-        <label for="artist-name">Artist name</label>
-        <input type="text" id="artist-name" name="artistName" required />
-      </div>
-      <div class="form-group">
-        <label for="title">Price</label>
-        <input type="number" id="price" name="price" required />
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="date">Date</label>
-        <input
-          type="date"
-          id="date"
-          name="date"
-          placeholder="MM/DD/YYYY"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <label for="medium">Medium</label>
-        <input type="text" id="medium" name="medium" required />
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="medium">Title</label>
-        <input type="text" id="title" name="title" required />
-      </div>
-      <div class="form-group">
-        <label for="medium">Dimensions</label>
-        <input type="text" id="dim" name="dim" required />
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="last-name">Description</label>
-        <textarea
-          name="listing-description"
-          id="description"
-          cols="90"
-          rows="10"
-        ></textarea>
-      </div>
-    </div>
-
-    <div class="form-group upload-section">
-      <label>Upload the Photo of Artwork</label>
-      <div class="upload-area" id="drop-zone">
-        <input type="file" id="file-input" accept="image/*" multiple required />
-        <button type="button" class="browse-btn">Browse Files</button>
-        <p>Drag and drop files here</p>
-      </div>
-      <div id="file-list"></div>
-    </div>
-
-    <button type="submit" class="submit-btn">Post to Listings</button>
-  </form>
-</div>
-
-<div class="container gallery">
-  <h2>Gallery</h2>
-  <div class="form-group upload-section">
-    <label>Upload the Photo of Artwork</label>
-    <div class="upload-area" id="drop-zone">
-      <input type="file" id="file-input" accept="image/*" multiple required />
-      <button type="button" class="browse-btn">Browse Files</button>
-      <p>Drag and drop files here</p>
-    </div>
-    <div id="file-list"></div>
-    <button type="submit" class="submit-btn">Post to Gallery</button>
-  </div>
-</div>
-<div class="container gallery">
-  <h2>Video Exhibitions</h2>
-  <div class="form-group upload-section">
-    <label>Upload the Video of Artwork</label>
-    <div class="upload-area" id="drop-zone">
-      <input type="file" id="file-input" accept="video/*" multiple required />
-      <button type="button" class="browse-btn">Browse Files</button>
-      <p>Drag and drop files here</p>
-    </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="last-name">Description</label>
-        <textarea
-          name="description"
-          id="description"
-          cols="90"
-          rows="10"
-        ></textarea>
-      </div>
-    </div>
-    <div id="file-list"></div>
-    <button type="submit" class="submit-btn">Post to Exhibitions</button>
-  </div>
-</div>
-
-<div class="post">
-  <a href="/admin-page">Admin Page</a>
-</div>
-
-<script src="scripts/script.js"></script>
-
-<%- include("../partials/footer") -%>
-</body>
+    <%- include("../partials/footer") -%>
+  </body>
 </html>
-
