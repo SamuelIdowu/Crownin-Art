@@ -2,7 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const path = require("path");
-const nodemailer = require("nodemailer")
+const nodemailer = require("nodemailer");
+const { log, error } = require("console");
 
 const app = express();
 const port = 3000;
@@ -45,6 +46,17 @@ app.get("/login", (req, res) => {
     res.render("admin/login");
 });
 
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  if (username == "admin" && password == "admin") { 
+    res.redirect("/admin-page");
+    console.log("Login Successful");
+  } else {
+    res.redirect("/login");
+    console.log("Login Failed");
+  }
+  });
+
 app.get("/admin-page", (req, res) => {
     res.render("admin/admin-page");
 });
@@ -53,10 +65,11 @@ app.get("/post", (req, res) => {
     res.render("admin/post");
 });
 
-app.post('/artwork-post', (req, res) => {
-    const { ArtistName, price, date, medium, title, dim, artworkDescription } = req.body;
+app.post('/send-artwork', (req, res) => {
+    const { artistName, price, date, medium, title, dim, artworkDescription } = req.body;
+    console.log(artistName, price, date, medium, title, dim, artworkDescription);
   
-    res.send('Form submitted successfully!');
+    res.redirect("/post");
 });
 app.post('/gallery-post')
 
@@ -91,9 +104,7 @@ app.post('/send-email', (req, res) => {
       if (error) {
         console.log(error);
         res.redirect("/contact");
-        alert("Error Sending Message, Please Retry");
       } else {
-        alert("Message Sent Thank You");
         console.log('Email sent: ' + info.response);
         res.redirect("/contact");
       }
