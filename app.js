@@ -1,118 +1,49 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const ejs = require("ejs");
-const path = require("path");
-const nodemailer = require("nodemailer");
-const { log, error } = require("console");
+const express = require('express');
+const path = require('path');
+const morgan = require('morgan');
+const dotenv = require('dotenv');
+const connectDB = require('./utils/db');
+const catalogueRoutes = require('./routes/catalogueRoutes');
+const listingRoutes = require('./routes/listingRoutes');
+const galleryRoutes = require('./routes/galleryRoutes');
+const exhibitionRoutes = require('./routes/exhibitionRoutes');
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
+// Connect to database
+connectDB();
+
+// Middleware
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'models')));
+app.use(express.static(path.join(__dirname, 'templates')));
+app.use(morgan('dev')); // Logging middleware
 
-app.get("/", (req, res) => {
-    res.render("layouts/home");
+// Routes
+app.use("/", require("./routes/routes"));
+app.use("/admin", require("./routes/adminRoutes"));
+app.use("/contact", require("./routes/contactRoutes"));
+app.use("/newsletter", require("./routes/newsletterRoutes"));
+app.use('/artwork-post', catalogueRoutes);
+app.use('/send-artwork', listingRoutes);
+app.use('/post', galleryRoutes);
+app.use('/post', exhibitionRoutes);
+
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).render("error", { message: "Something went wrong!" });
 });
 
-app.get("/about", (req, res) => {
-    res.render("layouts/about");
-});
-
-app.get("/contact", (req, res) => {
-    res.render("layouts/contact");
-});
-
-app.get("/catalogue", (req, res) => {
-    res.render("layouts/catalogue");
-});
-
-app.get("/listings", (req, res) => {
-    res.render("layouts/listings");
-});
-
-app.get("/exhibitions", (req, res) => {
-    res.render("layouts/exhibitions");
-});
-
-app.get("/gallery", (req, res) => {
-    res.render("layouts/gallery");
-});
-
-app.get("/login", (req, res) => {
-    res.render("admin/login");
-});
-
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  if (username == "admin" && password == "admin") { 
-    res.redirect("/admin-page");
-    console.log("Login Successful");
-  } else {
-    res.redirect("/login");
-    console.log("Login Failed");
-  }
-  });
-
-app.get("/admin-page", (req, res) => {
-    res.render("admin/admin-page");
-});
-
-app.get("/post", (req, res) => {
-    res.render("admin/post");
-});
-
-app.post('/send-artwork', (req, res) => {
-    const { artistName, price, date, medium, title, dim, artworkDescription } = req.body;
-    console.log(artistName, price, date, medium, title, dim, artworkDescription);
-  
-    res.redirect("/post");
-});
-app.post('/gallery-post')
-
-
-//contact form submisstion
-app.post('/send-email', (req, res) => {
-    const { name, email, message } = req.body;
-  
-    // Create a transporter
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true, // use SSL/TLS
-      service: "Gmail",
-      auth: {
-        user: 'samuelidowu689@gmail.com',
-        pass: 'luwnqoxqnzzzpypz',
-      },
-    });
-    
-  
-    // Define email options
-    const mailOptions = {
-      from: email,
-      to: 'thenasis2@gmail.com',
-      subject: 'New message from your website',
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-    };
-  
-    // Send email
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log(error);
-        res.redirect("/contact");
-      } else {
-        console.log('Email sent: ' + info.response);
-        res.redirect("/contact");
-      }
-    });
-  });
-
-
-
-  app.listen(port, () => {
-    console.log(`Server started on port ${port}`);
+// Start Server
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });

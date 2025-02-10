@@ -11,22 +11,31 @@
   <body>
     <%- include("../partials/header") -%>
 
-    <!-- <div class="container">
+    <div class="container">
       <h2>Catalogue</h2>
-      <form id="catalogue-form" action="/artwork-post" method="post">
+      <form
+        id="catalogue-form"
+        action="/artwork-post"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <div class="form-row">
           <div class="form-group">
             <label for="artist-name">Artist name</label>
             <input
               type="text"
-              id="artist-name"
+              id="catalogue-artist-name"
               name="catalogueArtistName"
               required
             />
           </div>
           <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" id="title" name="title" required />
+            <input 
+            type="text" 
+            id="title" 
+            name="catalogueTitle" 
+            required />
           </div>
         </div>
 
@@ -36,18 +45,22 @@
             <input
               type="date"
               id="date"
-              name="date"
+              name="catalogueDate"
               placeholder="MM/DD/YYYY"
               required
             />
           </div>
           <div class="form-group">
             <label for="medium">Medium</label>
-            <input type="text" id="medium" name="medium" required />
+            <input type="text" id="medium" name="catalogueMedium" required />
           </div>
           <div class="form-group">
             <label for="medium">Dimensions</label>
-            <input type="text" id="dim" name="dim" required />
+            <input 
+            type="text" 
+            id="dim" 
+            name="catalogueDim" 
+            required />
           </div>
         </div>
 
@@ -55,7 +68,7 @@
           <div class="form-group">
             <label for="last-name">Description</label>
             <textarea
-              name="gallery-description"
+              name="catalogueDescription"
               id="gallery-description"
               cols="90"
               rows="10"
@@ -69,6 +82,7 @@
             <input
               type="file"
               id="file-input"
+              name="catalogueImage"
               accept="image/*"
               multiple
               required
@@ -81,19 +95,28 @@
 
         <button type="submit" class="submit-btn">Post to catalogue</button>
       </form>
-    </div> -->
+    </div>
 
     <div class="container listing">
-      <h2>Artwork</h2>
+      <h2>Listings</h2>
       <form id="artwork-form" action="/send-artwork" method="post">
         <div class="form-row">
           <div class="form-group">
             <label for="artist-name">Artist name</label>
-            <input type="text" id="artist-name" name="artistName" required />
+            <input
+              type="text"
+              id="listing-artist-name"
+              name="listingArtistName"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="title">Price</label>
-            <input type="number" id="price" name="price" required />
+            <input 
+            type="number" 
+            id="price" 
+            name="price" 
+            required />
           </div>
         </div>
 
@@ -103,32 +126,44 @@
             <input
               type="date"
               id="date"
-              name="date"
+              name="listingDate"
               placeholder="MM/DD/YYYY"
               required
             />
           </div>
           <div class="form-group">
             <label for="medium">Medium</label>
-            <input type="text" id="medium" name="medium" required />
+            <input 
+            type="text" 
+            id="medium" 
+            name="listingMedium" 
+            required />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="medium">Title</label>
-            <input type="text" id="title" name="title" required />
+            <input 
+            type="text" 
+            id="title" 
+            name="listingTitle" 
+            required />
           </div>
           <div class="form-group">
             <label for="medium">Dimensions</label>
-            <input type="text" id="dim" name="dim" required />
+            <input 
+            type="text" 
+            id="dim" 
+            name="listingDim" 
+            required />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="last-name">Description</label>
             <textarea
-              name="artworkDescription"
+              name="listingDescription"
               id="description"
               cols="90"
               rows="10"
@@ -137,23 +172,23 @@
         </div>
 
         <div class="form-group upload-section">
-            <label>Upload the Photo of Artwork</label>
-            <div class="upload-area" id="drop-zone">
-              <input
-                type="file"
-                id="file-input"
-                accept="image/*"
-                multiple
-                required
-              />
-              <button type="button" class="browse-btn">Browse Files</button>
-              <p>Drag and drop files here</p>
-            </div>
-            <div id="file-list"></div>
+          <label>Upload the Photo of Artwork</label>
+          <div class="upload-area" id="drop-zone">
+            <input
+              name="listingImage"
+              type="file"
+              id="file-input"
+              accept="image/*"
+              multiple
+              required
+            />
+            <button type="button" class="browse-btn">Browse Files</button>
+            <p>Drag and drop files here</p>
+          </div>
+          <div id="file-list"></div>
         </div>
 
         <button type="submit" class="submit-btn">Post to Listings</button>
-        <button type="submit" class="submit-btn">Post to catalogue</button>
       </form>
     </div>
 
@@ -164,6 +199,7 @@
           <label>Upload the Photo of Artwork</label>
           <div class="upload-area" id="drop-zone">
             <input
+              name="galleryImage"
               type="file"
               id="file-input"
               accept="image/*"
@@ -179,12 +215,13 @@
       </form>
     </div>
     <div class="container gallery">
+      <h2>Video Exhibitions</h2>
       <form action="/post" id="exhibitions-form" method="POST">
-        <h2>Video Exhibitions</h2>
         <div class="form-group upload-section">
           <label>Upload the Video of Artwork</label>
           <div class="upload-area" id="drop-zone">
             <input
+              name="exhibitionVideo"
               type="file"
               id="file-input"
               accept="video/*"
@@ -198,7 +235,7 @@
             <div class="form-group">
               <label for="last-name">Description</label>
               <textarea
-                name="description"
+                name="exhibitionDescription"
                 id="description"
                 cols="90"
                 rows="10"

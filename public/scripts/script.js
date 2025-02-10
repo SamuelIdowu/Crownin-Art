@@ -40,20 +40,20 @@ setInterval(() => {
 
 
 //news letter
-document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+// document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+//     e.preventDefault();
     
-    const email = document.getElementById('newsletterEmail').value;
+//     const email = document.getElementById('newsletterEmail').value;
 
-    // Here you would typically send the email to your server for newsletter signup
-    console.log('Newsletter signup:', email);
+//     // Here you would typically send the email to your server for newsletter signup
+//     console.log('Newsletter signup:', email);
     
-    // Show success message
-    alert('Thank you for subscribing to our newsletter!');
+//     // Show success message
+//     alert('Thank you for subscribing to our newsletter!');
     
-    // Reset form
-    this.reset();
-});
+//     // Reset form
+//     this.reset();
+// });
 
 
 // About
