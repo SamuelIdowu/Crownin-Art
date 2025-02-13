@@ -17,7 +17,7 @@ exports.processListingData = async (req, res) => {
       })),
       metadata: {
         ipAddress: req.ip,
-        status: 'active'
+        lastModified: Date.now()
       }
     };
 

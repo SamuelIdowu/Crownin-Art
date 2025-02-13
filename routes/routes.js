@@ -31,4 +31,18 @@ router.get("/gallery", (req, res) => {
   res.render("layouts/gallery");
 });
 
+router.get("/post", (req, res) => {
+  res.render("admin/post");
+});
+
+router.get("/admin-page", (req, res) => {
+  res.render("admin/admin-page");
+});
+
+
+router.get("/login", (req, res) => {
+  res.render("admin/login");
+});
+
+
 module.exports = router;

@@ -15,7 +15,7 @@
       <h2>Catalogue</h2>
       <form
         id="catalogue-form"
-        action="/artwork-post"
+        action="/artwork-post/submit"
         method="post"
         enctype="multipart/form-data"
       >
@@ -31,11 +31,7 @@
           </div>
           <div class="form-group">
             <label for="title">Title</label>
-            <input 
-            type="text" 
-            id="title" 
-            name="catalogueTitle" 
-            required />
+            <input type="text" id="title" name="catalogueTitle" required />
           </div>
         </div>
 
@@ -55,21 +51,17 @@
             <input type="text" id="medium" name="catalogueMedium" required />
           </div>
           <div class="form-group">
-            <label for="medium">Dimensions</label>
-            <input 
-            type="text" 
-            id="dim" 
-            name="catalogueDim" 
-            required />
+            <label for="dim">Dimensions</label>
+            <input type="text" id="dim" name="catalogueDim" required />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="last-name">Description</label>
+            <label for="description">Description</label>
             <textarea
               name="catalogueDescription"
-              id="gallery-description"
+              id="catalogue-description"
               cols="90"
               rows="10"
             ></textarea>
@@ -78,28 +70,35 @@
 
         <div class="form-group upload-section">
           <label>Upload the Photo of Artwork</label>
-          <div class="upload-area" id="drop-zone">
+          <div class="upload-area" id="catalogue-drop-zone">
             <input
               type="file"
-              id="file-input"
-              name="catalogueImage"
+              id="catalogue-file-input"
+              name="catalogueImages"
               accept="image/*"
               multiple
               required
             />
-            <button type="button" class="browse-btn">Browse Files</button>
+            <button type="button" id="catalogue-browse-btn" class="browse-btn">
+              Browse Files
+            </button>
             <p>Drag and drop files here</p>
           </div>
-          <div id="file-list"></div>
+          <div id="catalogue-file-list"></div>
         </div>
 
-        <button type="submit" class="submit-btn">Post to catalogue</button>
+        <button type="submit" class="submit-btn">Submit</button>
       </form>
     </div>
 
     <div class="container listing">
       <h2>Listings</h2>
-      <form id="artwork-form" action="/send-artwork" method="post">
+      <form
+        id="listing-form"
+        action="/send-artwork/submit"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <div class="form-row">
           <div class="form-group">
             <label for="artist-name">Artist name</label>
@@ -112,11 +111,7 @@
           </div>
           <div class="form-group">
             <label for="title">Price</label>
-            <input 
-            type="number" 
-            id="price" 
-            name="price" 
-            required />
+            <input type="number" id="price" name="price" required />
           </div>
         </div>
 
@@ -133,30 +128,18 @@
           </div>
           <div class="form-group">
             <label for="medium">Medium</label>
-            <input 
-            type="text" 
-            id="medium" 
-            name="listingMedium" 
-            required />
+            <input type="text" id="medium" name="listingMedium" required />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="medium">Title</label>
-            <input 
-            type="text" 
-            id="title" 
-            name="listingTitle" 
-            required />
+            <input type="text" id="title" name="listingTitle" required />
           </div>
           <div class="form-group">
             <label for="medium">Dimensions</label>
-            <input 
-            type="text" 
-            id="dim" 
-            name="listingDim" 
-            required />
+            <input type="text" id="dim" name="listingDim" required />
           </div>
         </div>
         <div class="form-row">
@@ -173,83 +156,100 @@
 
         <div class="form-group upload-section">
           <label>Upload the Photo of Artwork</label>
-          <div class="upload-area" id="drop-zone">
+          <div class="upload-area" id="listing-drop-zone">
             <input
-              name="listingImage"
+              name="listingImages"
               type="file"
-              id="file-input"
+              id="listing-file-input"
               accept="image/*"
               multiple
               required
             />
-            <button type="button" class="browse-btn">Browse Files</button>
+            <button type="button" id="listing-browse-btn" class="browse-btn">
+              Browse Files
+            </button>
             <p>Drag and drop files here</p>
           </div>
-          <div id="file-list"></div>
+          <div id="listing-file-list"></div>
         </div>
 
-        <button type="submit" class="submit-btn">Post to Listings</button>
+        <button type="submit" class="submit-btn">Submit</button>
       </form>
     </div>
 
     <div class="container gallery">
-      <form action="/post" method="POST">
-        <h2>Gallery</h2>
+      <h2>Gallery</h2>
+      <form
+        id="gallery-form"
+        action="/post-to-gallery/submit"
+        method="POST"
+        enctype="multipart/form-data"
+      >
         <div class="form-group upload-section">
           <label>Upload the Photo of Artwork</label>
-          <div class="upload-area" id="drop-zone">
+          <div class="upload-area" id="gallery-drop-zone">
             <input
-              name="galleryImage"
+              name="galleryImages"
               type="file"
-              id="file-input"
+              id="gallery-file-input"
               accept="image/*"
               multiple
               required
             />
-            <button type="button" class="browse-btn">Browse Files</button>
+            <button type="button" id="gallery-browse-btn" class="browse-btn">
+              Browse Files
+            </button>
             <p>Drag and drop files here</p>
           </div>
-          <div id="file-list"></div>
-          <button type="submit" class="submit-btn">Post to Gallery</button>
+          <div id="gallery-file-list"></div>
+          <button type="submit" class="submit-btn">Submit</button>
         </div>
       </form>
     </div>
     <div class="container gallery">
       <h2>Video Exhibitions</h2>
-      <form action="/post" id="exhibitions-form" method="POST">
+      <form
+        action="/post-to-exhibitions/submit"
+        id="exhibition-form"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="form-row">
+          <div class="form-group">
+            <label for="last-name">Description</label>
+            <textarea
+              name="exhibitionDescription"
+              id="description"
+              cols="90"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
         <div class="form-group upload-section">
           <label>Upload the Video of Artwork</label>
-          <div class="upload-area" id="drop-zone">
+          <div class="upload-area" id="exhibition-drop-zone">
             <input
               name="exhibitionVideo"
               type="file"
-              id="file-input"
+              id="exhibition-file-input"
               accept="video/*"
               multiple
               required
             />
-            <button type="button" class="browse-btn">Browse Files</button>
+            <button type="button" id="exhibition-browse-btn" class="browse-btn">
+              Browse Files
+            </button>
             <p>Drag and drop files here</p>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="last-name">Description</label>
-              <textarea
-                name="exhibitionDescription"
-                id="description"
-                cols="90"
-                rows="10"
-              ></textarea>
-            </div>
-          </div>
-          <div id="file-list"></div>
-          <button type="submit" class="submit-btn">Post to Exhibitions</button>
+
+          <div id="exhibition-file-list"></div>
+          <button type="submit" class="submit-btn">Submit</button>
         </div>
       </form>
     </div>
 
     <div class="post">
-      <a href="/admin-page">Admin Page</a>
+      <a href="admin/login">Admin Page</a>
     </div>
 
     <script src="scripts/script.js"></script>

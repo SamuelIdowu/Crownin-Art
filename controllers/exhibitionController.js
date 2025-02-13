@@ -1,17 +1,19 @@
 // controllers/exhibitionController.js
-const Exhibition = require('../models/Exhibition');
+const Exhibition = require('../models/exhibition');
 
 exports.processExhibitionData = async (req, res) => {
   try {
+    console.log('Processing exhibition data');
     const exhibitionData = {
-      video: {
-        data: req.files[0].buffer,
-        contentType: req.files[0].mimetype,
-        originalName: req.files[0].originalname
-      },
       description: req.body.exhibitionDescription,
+      videos: req.files.map(file => ({
+        data: file.buffer,
+        contentType: file.mimetype,
+        originalName: file.originalname
+      })),
       metadata: {
-        ipAddress: req.ip
+        ipAddress: req.ip,
+        lastModified: Date.now()
       }
     };
 

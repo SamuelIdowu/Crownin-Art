@@ -7,6 +7,7 @@ const catalogueRoutes = require('./routes/catalogueRoutes');
 const listingRoutes = require('./routes/listingRoutes');
 const galleryRoutes = require('./routes/galleryRoutes');
 const exhibitionRoutes = require('./routes/exhibitionRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 // Load environment variables
 dotenv.config();
@@ -29,13 +30,13 @@ app.use(morgan('dev')); // Logging middleware
 
 // Routes
 app.use("/", require("./routes/routes"));
-app.use("/admin", require("./routes/adminRoutes"));
+app.use("/admin", adminRoutes);
 app.use("/contact", require("./routes/contactRoutes"));
 app.use("/newsletter", require("./routes/newsletterRoutes"));
 app.use('/artwork-post', catalogueRoutes);
 app.use('/send-artwork', listingRoutes);
-app.use('/post', galleryRoutes);
-app.use('/post', exhibitionRoutes);
+app.use('/post-to-gallery', galleryRoutes);
+app.use('/post-to-exhibitions', exhibitionRoutes);
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {

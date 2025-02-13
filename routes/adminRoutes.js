@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 
-// Login Page (GET)
-router.get("/", (req, res) => {
-  res.render("admin/login");
-});
+// // Login Page (GET)
+// router.get("/login", (req, res) => {
+//   res.render("admin/login");
+// });
 
 // Login Page (POST)
 router.post(
@@ -31,10 +31,10 @@ router.post(
   }
 );
 
-// Admin Dashboard
-router.get("/admin-page", (req, res) => {
-  res.render("admin/admin-page");
-});
+// // Admin Dashboard
+// router.get("/admin-page", (req, res) => {
+//   res.render("admin/admin-page");
+// });
 
 // Post Artwork Page
 router.get("/post", (req, res) => {

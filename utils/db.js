@@ -2,15 +2,11 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const mongouri = "mongodb://localhost:27017/crownin"
-
 const connectDB = async () => {
   try {
-    await mongoose.connect(mongouri, {
+    await mongoose.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      // useCreateIndex: true,
-      // useFindAndModify: false
     });
     console.log('MongoDB connected successfully');
   } catch (err) {
@@ -18,6 +14,5 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
-
 
 module.exports = connectDB;

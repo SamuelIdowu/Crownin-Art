@@ -82,7 +82,7 @@ small {
     border-color: #4a90e2;
 }
 
-#file-input {
+.upload-area input{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -151,6 +151,9 @@ small {
     margin: 5rem;
     font-size: 2rem;
     text-align: center;
+}
+.gallery .upload-area{
+    margin-bottom: 1rem;
 }
 .listing, 
 .gallery{
