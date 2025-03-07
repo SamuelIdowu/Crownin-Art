@@ -10,13 +10,19 @@
   </head>
   <body>
     <%- include("../partials/header") -%>
-    <main>
-      <div class="gallery" id="imageGallery">
-        <img id="templateImg" style="display: none" />
+
+    <main class="content">
+      <div id="imageGallery" class="gallery">
+        <% galleryItems.forEach(item => { %>
+        <img
+          src="<%= item.imageUrl %>"
+          alt="Gallery Item"
+          class="gallery-image"
+        />
+        <% }) %>
       </div>
     </main>
 
-    <script src="galleryTemplate.js"></script>
     <script src="/scripts/script.js"></script>
 
     <%- include("../partials/footer") -%>

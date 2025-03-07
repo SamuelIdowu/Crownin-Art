@@ -2,7 +2,6 @@ body{
   font-family:cursive;
   overflow-x: hidden;
 }
-
 .typing {
     font-family: monospace;
     border-right: 3px solid black;

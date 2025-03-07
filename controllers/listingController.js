@@ -1,5 +1,5 @@
 // controllers/listingController.js
-const Listing = require('../models/listing');
+const Listing = require("../models/listing");
 
 exports.processListingData = async (req, res) => {
   try {
@@ -10,30 +10,24 @@ exports.processListingData = async (req, res) => {
       title: req.body.listingTitle,
       dimensions: req.body.listingDim,
       description: req.body.listingDescription,
-      images: req.files.map(file => ({
+      images: req.files.map((file) => ({
         data: file.buffer,
         contentType: file.mimetype,
-        originalName: file.originalname
+        originalName: file.originalname,
       })),
       metadata: {
         ipAddress: req.ip,
-        lastModified: Date.now()
-      }
+        lastModified: Date.now(),
+      },
     };
 
     const newListing = new Listing(listingData);
     await newListing.save();
 
-    res.status(201).json({
-      success: true,
-      message: 'Artwork listing created successfully',
-      id: newListing._id
-    });
+    console.log("Listing submission successful");
+    res.redirect("/impact/success");
   } catch (err) {
-    console.error('Listing submission error:', err);
-    res.status(500).json({
-      success: false,
-      message: 'Server error occurred while creating listing'
-    });
+    console.error("Listing submission error:", err);
+    res.redirect("/impact/failure");
   }
 };

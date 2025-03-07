@@ -12,10 +12,24 @@
     <%- include("../partials/header") -%>
 
     <main class="content">
-      <div class="exhibitions" id="exhibitions"></div>
+      <div class="exhibitions" id="exhibitions">
+        <% exhibitions.forEach(exhibition => { %>
+          <div class="component">
+            <div class="video">
+              <video controls>
+                <source src="<%= exhibition.videoSrc %>" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="details">
+              <h2><%= exhibition.title %></h2>
+              <p><%= exhibition.description %></p>
+            </div>
+          </div>
+        <% }) %>
+      </div>
     </main>
 
-    <script src="exhibitionTemplate.js"></script>
     <script src="scripts/script.js"></script>
     <%- include("../partials/footer") -%>
   </body>

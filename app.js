@@ -37,6 +37,9 @@ app.use('/artwork-post', catalogueRoutes);
 app.use('/send-artwork', listingRoutes);
 app.use('/post-to-gallery', galleryRoutes);
 app.use('/post-to-exhibitions', exhibitionRoutes);
+// app.use('/success', adminRoutes);
+// app.use('/failure', adminRoutes);
+
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {

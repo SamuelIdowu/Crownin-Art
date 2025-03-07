@@ -12,10 +12,25 @@
     <%- include("../partials/header") -%>
 
     <main class="content">
-      <div id="art-gallery" class="art-gallery"></div>
+      <div id="art-gallery" class="art-gallery">
+        <% catalogues.forEach(art => { %>
+        <div class="art-description">
+          <img src="<%= art.imageUrl %>" alt="Artwork" class="art-image" />
+          <div class="art-details">
+            <h1 class="art-title">TITLE : <%= art.title %></h1>
+            <p class="art-artist">ARTIST : <%= art.artist %></p>
+            <p class="art-date">
+              DATE : <%= art.creationDate.toDateString() %>
+            </p>
+            <p class="art-medium">MEDIUM : <%= art.medium %></p>
+            <p class="art-dimensions">DIMENSIONS : <%= art.dimensions %></p>
+            <p class="art-description">DESCRIPTION : <%= art.description %></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
     </main>
 
-    <script src="catalogueTemplate.js"></script>
     <script src="scripts/script.js"></script>
 
     <%- include("../partials/footer") -%>

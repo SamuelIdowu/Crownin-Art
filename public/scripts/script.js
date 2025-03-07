@@ -253,24 +253,3 @@ function setupFileUpload(dropZoneId, fileInputId, browseBtnId, fileListId) {
       console.log(`${key}: ${value}`);
     }
   });
-
-//Login Page
-
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const errorMessage = document.getElementById('errorMessage');
-
-    // Simple client-side validation
-    if (username.length < 3 || password.length < 6) {
-        errorMessage.textContent = 'Username must be at least 3 characters and password at least 6 characters long.';
-        return;
-    }
-
-    // Here you would typically send the login data to a server
-    console.log('Login attempt:', { username, password });
-    errorMessage.textContent = 'Login successful! (This is a demo, no actual authentication occurred)';
-    errorMessage.style.color = 'green';
-});

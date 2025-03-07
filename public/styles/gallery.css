@@ -15,6 +15,7 @@ body {
 
 main{
     margin-top: 1rem;
+    min-height: 100vh;
 }
 .gallery {
     display: flex;

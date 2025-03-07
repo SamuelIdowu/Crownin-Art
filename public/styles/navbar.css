@@ -49,24 +49,24 @@ header {
     color: var(--primary-color);
 }
 
-nav ul {
+.nav-links ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
 }
-nav ul li {
+.nav-links ul li {
     margin: 0 1rem;
 }
-nav ul li a:hover{
+.nav-links ul li a:hover{
     color: var(--touch);
     transition: .5s;
 }
-nav ul li a.active{
+.nav-links ul li a.active{
     color: var(--touch);
 }
-nav ul li a {
+.nav-links ul li a {
     text-decoration: none;
     color: #000;
 }
@@ -210,11 +210,11 @@ ul li {
         visibility: visible;
         margin-top: 2rem;
     }
-    nav ul {
+    .nav-links ul {
         display: none;
     }
 
-    nav ul li {
+    .nav-links ul li {
         margin: 1rem 0;
     }
     .footer .socials{
