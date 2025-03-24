@@ -7,4 +7,4 @@ module.exports = {
     listingUpload: multer({ storage }).array('listingImage'),
     galleryUpload: multer({ storage }).array('galleryImage'),
     exhibitionUpload: multer({ storage }).array('exhibitionVideo')
-};
+}; 

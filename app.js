@@ -34,6 +34,7 @@ app.use("/admin", adminRoutes);
 app.use("/contact", require("./routes/contactRoutes"));
 app.use("/newsletter", require("./routes/newsletterRoutes"));
 app.use('/artwork-post', catalogueRoutes);
+// app.use('/listings', listingRoutes);
 app.use('/send-artwork', listingRoutes);
 app.use('/post-to-gallery', galleryRoutes);
 app.use('/post-to-exhibitions', exhibitionRoutes);

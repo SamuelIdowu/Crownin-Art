@@ -86,7 +86,7 @@ body {
   line-height: 1.6;
   margin-top: 1rem;
   border-top: 1px solid #eee;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 /* Responsive adjustments */

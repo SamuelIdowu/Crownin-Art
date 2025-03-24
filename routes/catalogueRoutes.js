@@ -14,4 +14,5 @@ router.post('/submit', upload.array('catalogueImages'), (req, res, next) => {
   processCatalogueData(req, res).catch(next);
 });
 
+
 module.exports = router;

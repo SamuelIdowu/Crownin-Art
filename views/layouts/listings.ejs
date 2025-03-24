@@ -12,14 +12,10 @@
     <%- include("../partials/header") -%>
 
     <main class="content">
-      <div id="art-gallery" class="art-gallery">
+      <div id="art-gallery" class="art-gallery fade-in">
         <% listings.forEach(listing => { %>
         <div class="art-description">
-          <img
-            src="<%= listing.imageUrl %>"
-            alt="Listing"
-            class="art-image"
-          />
+          <img src="<%= listing.imageUrl %>" alt="Listing" class="art-image" />
           <div class="art-details">
             <h1 class="art-title">TITLE : <%= listing.title %></h1>
             <p class="art-artist">ARTIST : <%= listing.artist %></p>
@@ -28,13 +24,31 @@
               listing.creationDate.toDateString() : 'N/A' %>
             </p>
             <p class="art-medium">MEDIUM : <%= listing.medium %></p>
-            <p class="art-dimensions">
-              DIMENSIONS : <%= listing.dimensions %>
-            </p>
+            <p class="art-dimensions">DIMENSIONS : <%= listing.dimensions %></p>
             <p class="art-price">PRICE : <%= listing.price %></p>
+
             <p class="art-description">
               DESCRIPTION : <%= listing.description %>
             </p>
+
+            <!-- <form action="/listings/send-inquiry/<%= listing.id %>" method="POST">
+              <button type="submit" class="buy-button">Buy</button>
+            </form> -->
+
+            <!-- <a
+              href="mailto:thenasis2@gmail.com?subject=Inquiry%20about%20<%= encodeURIComponent(listing.title) %>&body=Hello,%0D%0A%0D%0AI am interested in purchasing '<%= encodeURIComponent(listing.title) %>' for <%= listing.price %>. Please provide more details.%0D%0A%0D%0AThank you."
+              class="buy-button"
+            >
+              Buy
+            </a> -->
+
+            <a
+              href="https://api.whatsapp.com/send?phone=+2348144604146&text=<%= encodeURIComponent(`Hello,\r\n\r\nI am interested in purchasing '${listing.title}' for ${listing.price}. Please provide more details.\r\n\r\nThank you.`) %>"
+              class="buy-button"
+              target="_blank"
+            >
+              Buy
+            </a>
           </div>
         </div>
         <% }) %>

@@ -9,21 +9,76 @@ body{
     width: 100%;
     max-width: 100%;
     display: inline-block;
-    animation: typing 5s steps(20, end), blink 0.5s step-end infinite;
+    animation: typing 5s steps(20, end), blink 0.4s step-end infinite;
   }
   
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-  }
+/* Page Load Animations */
+.nav header {
+  animation: slideDown .5s ease-out;
+}
+
+.background-carousel img {
+  animation: zoomIn 1s ease-in-out;
+}
+
+main h1 {
+  animation: fadeIn 1s ease-out 0.4s both;
+}
+
+main p {
+  animation: fadeIn 1s ease-out 0.8s both;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out 0.5s both;
   
-  @keyframes blink {
-    50% { border-color: transparent; }
+}
+
+.buy {
+  animation: fadeIn 1s ease-out 1s both;
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
   }
-  
-  @keyframes blink {
-    50% { border-color: transparent; }
+  to {
+      transform: translateY(0);
+      opacity: 1;
   }
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(1.1);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Initial state for animated elements */
+.background-carousel img,
+main h1,
+main p,
+.buy {
+  opacity: 0;
+}
+
   .fade-in {
     opacity: 0;
     animation: fadeIn 4s forwards;
