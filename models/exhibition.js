@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 const exhibitionSchema = new mongoose.Schema({
-  video: {
+  video: [{
     data: Buffer,
     contentType: String,
     originalName: String,
@@ -11,7 +11,7 @@ const exhibitionSchema = new mongoose.Schema({
       type: Date,
       default: Date.now
     }
-  },
+  }],
   description: {
     type: String,
     required: [true, 'Description is required'],

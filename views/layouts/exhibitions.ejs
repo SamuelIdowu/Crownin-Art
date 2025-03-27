@@ -14,18 +14,25 @@
     <main class="content">
       <div class="exhibitions fade-in" id="exhibitions">
         <% exhibitions.forEach(exhibition => { %>
-          <div class="component">
-            <div class="video">
-              <video controls>
-                <source src="<%= exhibition.videoSrc %>" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="details">
-              <h2><%= exhibition.title %></h2>
-              <p><%= exhibition.description %></p>
-            </div>
+        <div class="component">
+          <div class="video">
+            <% if (exhibition.videos && exhibition.videos.length > 0) { %>
+            <video controls>
+              <source
+                src="/exhibition/video/<%= exhibition._id %>/0"
+                type="<%= exhibition.videos[0].contentType %>"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <% } else { %>
+            <div class="video-placeholder">No video available</div>
+            <% } %>
           </div>
+          <div class="details">
+            <h2><%= exhibition.title %></h2>
+            <p><%= exhibition.description %></p>
+          </div>
+        </div>
         <% }) %>
       </div>
     </main>
@@ -34,3 +41,5 @@
     <%- include("../partials/footer") -%>
   </body>
 </html>
+
+

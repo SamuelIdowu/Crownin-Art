@@ -15,7 +15,15 @@
       <div id="art-gallery" class="art-gallery fade-in">
         <% listings.forEach(listing => { %>
         <div class="art-description">
-          <img src="<%= listing.imageUrl %>" alt="Listing" class="art-image" />
+          <% if (listing.images && listing.images.length > 0) { %>
+          <img
+            src="/image/<%= listing._id %>/0"
+            alt="Listing"
+            class="art-image"
+          />
+          <% } else { %>
+          <div class="placeholder-image">No Image Available</div>
+          <% } %>
           <div class="art-details">
             <h1 class="art-title">TITLE : <%= listing.title %></h1>
             <p class="art-artist">ARTIST : <%= listing.artist %></p>

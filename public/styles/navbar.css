@@ -100,9 +100,12 @@ footer {
   margin: 0 10px;
 }
 
-socials a {
+.socials a {
   color: #fff;
   text-decoration: none;
+}
+.socials a:hover {
+  color: var(--touch);
 }
 
 /* Basic hamburger icon Styling */

@@ -20,6 +20,18 @@ router.post("/submit", upload.array("listingImages"), (req, res, next) => {
   processListingData(req, res).catch(next);
 });
 
+// routes/listings.js
+router.get('/image/:listingId/:imageIndex', async (req, res) => {
+  try {
+    const listing = await Listing.findById(req.params.listingId);
+    const image = listing.images[req.params.imageIndex];
+    res.set('Content-Type', image.contentType);
+    res.send(image.data);
+  } catch (error) {
+    res.status(404).send('Listing image not found');
+  }
+});
+
 
 // const transporter = nodemailer.createTransport({
 //   service: "gmail",

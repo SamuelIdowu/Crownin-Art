@@ -11,6 +11,7 @@ exports.processGalleryData = async (req, res) => {
       })),
       metadata: {
         ipAddress: req.ip,
+        galleryPosition: req.body.position || 0
       },
     };
 

@@ -51,4 +51,5 @@ app.use((err, req, res, next) => {
 // Start Server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
+  // console.log(/image/art._id/0);
 });

@@ -14,28 +14,28 @@ body{
   
 /* Page Load Animations */
 .nav header {
-  animation: slideDown .5s ease-out;
+  animation: slideDown 1s ease-out;
 }
 
 .background-carousel img {
-  animation: zoomIn 1s ease-in-out;
+  animation: zoomIn .5s ease-in-out;
 }
 
 main h1 {
-  animation: fadeIn 1s ease-out 0.4s both;
+  animation: fadeIn .5s ease-out 0.4s both;
 }
 
 main p {
-  animation: fadeIn 1s ease-out 0.8s both;
+  animation: fadeIn .5s ease-out 0.8s both;
 }
 
 .fade-in {
-    animation: fadeIn 1s ease-out 0.5s both;
+    animation: fadeIn .5s ease-out 0.5s both;
   
 }
 
 .buy {
-  animation: fadeIn 1s ease-out 1s both;
+  animation: fadeIn .5s ease-out .5s both;
 }
 
 @keyframes slideDown {

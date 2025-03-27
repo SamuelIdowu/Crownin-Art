@@ -103,6 +103,9 @@ body {
   margin-top: 1rem;
 }
 @media (max-width: 768px) {
+  .content{
+    margin-top: 5rem;
+  }
   .art-gallery {
     grid-template-columns: 1fr;
     padding: 1rem;

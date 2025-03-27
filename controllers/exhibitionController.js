@@ -6,10 +6,10 @@ exports.processExhibitionData = async (req, res) => {
     console.log("Processing exhibition data");
     const exhibitionData = {
       description: req.body.exhibitionDescription,
-      videos: req.files.map((file) => ({
+      videos: req.files.map(file => ({
         data: file.buffer,
         contentType: file.mimetype,
-        originalName: file.originalname,
+        originalName: file.originalname
       })),
       metadata: {
         ipAddress: req.ip,

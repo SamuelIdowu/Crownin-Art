@@ -54,6 +54,11 @@ body {
     color: #333;
     margin-top: 24px;
 }
+.cta:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transition: ease .5s;
+}
 
 .image {
     width: 100%;

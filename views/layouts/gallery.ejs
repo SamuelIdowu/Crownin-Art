@@ -13,13 +13,16 @@
 
     <main class="content">
       <div id="imageGallery" class="gallery fade-in">
-        <% galleryItems.forEach(item => { %>
+        <% galleryItems.forEach(item => { %> <% if (item.images &&
+        item.images.length > 0) { %>
         <img
-          src="<%= item.imageUrl %>"
+          src="/gallery/image/<%= item._id %>/0"
           alt="Gallery Item"
           class="gallery-image"
         />
-        <% }) %>
+        <% } else { %>
+        <div class="image-placeholder">No Image Available</div>
+        <% } %> <% }) %>
       </div>
     </main>
 
