@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'models')));
 app.use(express.static(path.join(__dirname, 'templates')));
-app.use(morgan('dev')); // Logging middleware
+app.use(morgan('dev'));
 
 // Routes
 app.use("/", require("./routes/routes"));
