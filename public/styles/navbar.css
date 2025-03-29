@@ -88,7 +88,9 @@ footer {
   padding: 10px 0;
   text-align: center;
 }
-
+footer p a {
+  color: var(--bg-color);
+}
 .socials {
   list-style: none;
   display: flex;

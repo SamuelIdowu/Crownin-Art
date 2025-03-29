@@ -92,7 +92,12 @@ body {
 .content-area {
   padding: 30px;
 }
-
+.post a {
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #e74c3c;
+}
 /* Section Styles */
 .section {
   display: none;
