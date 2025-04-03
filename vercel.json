@@ -10,6 +10,10 @@
     {
       "src": "/(.*)",
       "dest": "api/app.js"
+    },
+    {
+      "src": "/styles/(.*)",
+      "dest": "/public/styles/$1"
     }
   ]
 }
