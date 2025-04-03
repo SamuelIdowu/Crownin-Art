@@ -1,3 +1,6 @@
-.vercel
+node_modules
+backup
+credentials.json
+package-lock.json
 .env
 vercel.json
