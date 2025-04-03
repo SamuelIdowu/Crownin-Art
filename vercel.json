@@ -11,5 +11,8 @@
       "src": "/(.*)",
       "dest": "api/app.js"
     }
-  ]
+  ],
+  "static": {
+    "public": "public"
+  }
 }
