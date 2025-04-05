@@ -8,13 +8,20 @@ const { processGalleryData } = require("../controllers/galleryController");
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-// Image serving route
-router.get("/image/:galleryId/:imageIndex", async (req, res) => {
+
+// Submission route
+router.post("/submit", upload.array("galleryImages"), (req, res, next) => {
+  processGalleryData(req, res).catch(next);
+  console.log("Received gallery submission");
+});
+
+// // Image serving route
+router.get("/image/:galleryId/:index", async (req, res) => {
   try {
     const galleryItem = await Gallery.findById(req.params.galleryId);
     if (!galleryItem) return res.status(404).send("Gallery item not found");
 
-    const imageIndex = parseInt(req.params.imageIndex);
+    const imageIndex = parseInt(req.params.index);
     const image = galleryItem.images[imageIndex];
 
     if (!image) return res.status(404).send("Image not found");
@@ -27,10 +34,6 @@ router.get("/image/:galleryId/:imageIndex", async (req, res) => {
   }
 });
 
-// Submission route
-router.post("/submit", upload.array("galleryImages"), (req, res, next) => {
-  console.log("Received gallery submission");
-  processGalleryData(req, res).catch(next);
-});
+
 
 module.exports = router;

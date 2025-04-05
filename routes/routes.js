@@ -26,16 +26,6 @@ router.get("/catalogue", async (req, res) => {
   }
 });
 
-// // API endpoint to fetch listings
-// router.get("/api/catalogue", async (req, res) => {
-//   try {
-//     const catalogues = await Catalogue.find();
-//     res.json(catalogues);
-//   } catch (err) {
-//     console.error("Error fetching catalogue:", err);
-//     res.status(500).send("Server Error");
-//   }
-// });
 
 // Listings Page
 router.get("/listings", async (req, res) => {
@@ -48,16 +38,6 @@ router.get("/listings", async (req, res) => {
   }
 });
 
-// // API endpoint to fetch listings
-// router.get("/api/listings", async (req, res) => {
-//   try {
-//     const listings = await Listing.find();
-//     res.json(listings);
-//   } catch (err) {
-//     console.error("Error fetching listings:", err);
-//     res.status(500).send("Server Error");
-//   }
-// });
 
 // Delete routes
 router.delete("/api/listings/:id", async (req, res) => {
@@ -139,6 +119,7 @@ router.get("/api/gallery", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+
 
 router.get("/post", (req, res) => {
   res.render("admin/post");

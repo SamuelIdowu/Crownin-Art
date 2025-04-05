@@ -24,22 +24,27 @@ const port = process.env.PORT || 3000;
 connectDB();
 
 // Middleware
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../views"));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '../views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("../public"));
-app.use(morgan("dev"));
+app.use(express.static('../public'));
+// app.use(express.static(path.join(__dirname, '../models')));
+app.use(morgan('dev')); // Logging middleware
 
-// Routes
+
+//Routes
 app.use("/", mainRoutes);
 app.use("/admin", adminRoutes);
 app.use("/contact", contactRoutes);
 app.use("/newsletter", newsletterRoutes);
-app.use("/catalogue", catalogueRoutes);
-app.use("/listings", listingRoutes);
-app.use("/gallery", galleryRoutes);
-app.use("/exhibitions", exhibitionRoutes);
+// app.use('/artwork-post', catalogueRoutes);
+app.use('/gallery', galleryRoutes);
+app.use('/catalogue', catalogueRoutes);
+app.use('/listings', listingRoutes);
+// app.use('/send-artwork', listingRoutes);
+// app.use('/post-to-gallery', galleryRoutes);
+// app.use('/post-to-exhibitions', exhibitionRoutes);
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
