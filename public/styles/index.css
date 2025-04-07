@@ -1,19 +1,19 @@
 :root {
-    --primary-color: #333;
-    --bg-color: #e0e0e0;
-  }
+  --primary-color: #333;
+  --bg-color: #e0e0e0;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    color: var(--bg-color) ;
-    text-shadow: 2px 2px var(--primary-color);
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--bg-color);
+  text-shadow: 2px 2px var(--primary-color);
 }
 /* .overlay {
     position: absolute;
@@ -24,41 +24,42 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 } */
-.nav{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: var(--bg-color);
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-color);
 }
 .background-carousel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    opacity: .8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.8;
 }
 
 .background-carousel img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 3s ease-in-out;
 }
 
 .background-carousel img.active {
-    opacity: 1;
+  opacity: 1;
 }
 #imgg {
-    opacity: 1;
-    transition: opacity 2s ease-in-out; /* Adjust the duration as needed */
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  z-index: -1;
 }
 .fade-out {
-    opacity: 0;
+  opacity: 0;
 }
 /* .unifrakturmaguntia-regular {
     font-family: "UnifrakturMaguntia", cursive;
@@ -66,250 +67,267 @@ body {
     font-style: normal;
   }   */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    margin: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  margin: 1rem;
 }
 header {
-    padding: 1rem;
-    justify-content: space-between;
-    /* align-items: center; */
-    text-align: center;
+  padding: 1rem;
+  justify-content: space-between;
+  /* align-items: center; */
+  text-align: center;
 }
 
-.logo{
-    position: relative;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 50px;
-    font-family: "Amarante", serif;
-    font-weight: 400;
-    font-style: normal;
+.logo {
+  position: relative;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .logo a,
 main a {
-    text-decoration: none;
-    color: var(--bg-color);
-    font-weight: 600;
+  text-decoration: none;
+  color: var(--bg-color);
+  font-weight: 600;
 }
-main a{
-    font-size: 25px;
+main a {
+  font-size: 25px;
 }
 nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
 }
-nav{
-    margin: 1rem;
+nav {
+  margin: 1rem;
 }
 nav ul li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-size: 20px;
-    transition: opacity 0.3s ease;
-    color: var(--bg-color);
+  text-decoration: none;
+  font-size: 20px;
+  transition: opacity 0.3s ease;
+  color: var(--bg-color);
 }
-nav ul li a:active{
-    opacity: .7;
+nav ul li a:active {
+  opacity: 0.7;
 }
 nav ul li a:hover,
 .logo h2 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  z-index: 1;
 }
 main p {
-    font-size: 2rem;
-    padding: 2rem;
+  font-size: 2rem;
+  padding: 2rem;
 }
 
-main a{
-    border: 2px solid var(--bg-color);
-    color: var(--bg-color);
-    padding: 1rem;
+main a {
+  border: 2px solid var(--bg-color);
+  color: var(--bg-color);
+  padding: 1rem;
 }
-main a:hover{
-    opacity: .7;
-    transition: 1s;
-    background-color: var(--bg-color);
+main a:hover {
+  opacity: 0.7;
+  transition: 1s;
+  background-color: var(--bg-color);
 }
 h1 {
-    font-size: 4rem;
-    font-weight: normal;
-    letter-spacing: 0.2em;
-    line-height: 1.2;
-    margin-bottom: 20px;
+  font-size: 4rem;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 .menu-icon {
-    width: 30px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 24px;
-    margin: 1rem;
-    visibility: hidden;
-    float: right;
-    margin-top: -2rem;
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  margin: 1rem;
+  visibility: hidden;
+  float: right;
+  margin-top: -2rem;
 }
 #menu-toggle {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
 .menu-icon span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: var(--bg-color);
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    box-shadow:0 2px 4px var(--primary-color);
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--primary-color);
 }
 
 .sidebar {
-    display: none;
-    background-color: var(--primary-color);
-    width: 250px;
-    top: 0;
-    height: 100vh;
-    line-height: 5rem;
-    text-align: center;
-    position: fixed;
-    left: -250px;
-    transition: left 0.5s ease 0.3s; /* Add delay to the transition */
-    z-index: 1000;
+  display: none;
+  background-color: var(--primary-color);
+  width: 250px;
+  top: 0;
+  height: 100vh;
+  line-height: 5rem;
+  text-align: center;
+  position: fixed;
+  left: -250px;
+  transition: left 0.5s ease 0.3s; /* Add delay to the transition */
+  z-index: 1000;
 }
 .sidebar.visible {
-    display: block;
-    left: 0;
-    animation: slideIn 0.5s forwards; /* Add slide-in animation */
+  display: block;
+  left: 0;
+  animation: slideIn 0.5s forwards; /* Add slide-in animation */
 }
 @keyframes slideIn {
-    from {
-        left: -250px;
-    }
-    to {
-        left: 0;
-    }
+  from {
+    left: -250px;
+  }
+  to {
+    left: 0;
+  }
 }
 .sidebar.hidden {
-    animation: slideOut 0.5s forwards; /* Add slide-out animation */
+  animation: slideOut 0.5s forwards; /* Add slide-out animation */
 }
 @keyframes slideOut {
-    from {
-        left: 0;
-    }
-    to {
-        left: -250px;
-    }
+  from {
+    left: 0;
+  }
+  to {
+    left: -250px;
+  }
 }
-.sidebar ul li a{
-    text-decoration: none;
-    color: var(--bg-color);
- }
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--bg-color);
+}
 
 /* Toggle Animation */
 .menu-icon.open span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
 }
 
 .menu-icon.open span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .menu-icon.open span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: -1; 
+  overflow: hidden;
+}
+
+/* Carousel Image */
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
 @media (min-width: 768px) {
-    .sidebar{
-        display: none;
-    }
+  .sidebar {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    #menu-toggle {
-        display: block;
-    }
-    #sidebar {
-        position: fixed;
-        top: 0;
-        /* left: -250px; */
-        width: 250px;
-        height: 100%;
-        /* background-color: var(--primary-color); */
-        color: var(--bg-color);
-        transition: left 1s ease-in-out;
-        z-index: 1000;
-    }
-    .menu-icon{
-        visibility: visible;
-        margin-top: 1rem;
-        float: right;
-    }
-    .logo{
-        float: left;
-        font-size: 40px;
-    }
-    .nav{
-        display: flex;
-        justify-content: space-between;
-    }
-    nav {
-        display: none;
-    }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  #menu-toggle {
+    display: block;
+  }
+  #sidebar {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    color: var(--bg-color);
+    transition: left 1s ease-in-out;
+    z-index: 1000;
+  }
+  .menu-icon {
+    visibility: visible;
+    margin-top: 1rem;
+    float: right;
+  }
+  .logo {
+    float: left;
+    font-size: 40px;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav {
+    display: none;
+  }
 
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-    header{
-        background: rgba(255, 255, 255, 0.2); 
-        border-radius: 10px; 
-        padding: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.3); 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-        backdrop-filter: blur(10px) saturate(180%);
-        -webkit-backdrop-filter: blur(10px) saturate(180%);
-        color: #fff; 
-        margin: 1rem;
-        width: 93%;
-    }
-    h1 {
-        font-size: 3rem;
-    }
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  header {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    color: #fff;
+    margin: 1rem;
+    width: 93%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
 
-    .year {
-        font-size: 1.2rem;
-    }
+  .year {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-    .year {
-        font-size: 1rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
+  .year {
+    font-size: 1rem;
+  }
 }

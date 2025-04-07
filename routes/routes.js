@@ -6,8 +6,14 @@ const Exhibition = require("../models/exhibition");
 const Gallery = require("../models/gallery");
 
 // Home Page
-router.get("/", (req, res) => {
-  res.render("layouts/home");
+router.get("/", async (req, res) => {
+  try {
+    const galleryItems = await Gallery.find();
+    res.render("layouts/home", { galleryItems });
+  } catch (err) {
+    console.error("Error fetching gallery items:", err);
+    res.status(500).send("Server Error");
+  }
 });
 
 // About Page
@@ -26,7 +32,6 @@ router.get("/catalogue", async (req, res) => {
   }
 });
 
-
 // Listings Page
 router.get("/listings", async (req, res) => {
   try {
@@ -37,7 +42,6 @@ router.get("/listings", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-
 
 // Delete routes
 router.delete("/api/listings/:id", async (req, res) => {
@@ -119,7 +123,6 @@ router.get("/api/gallery", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-
 
 router.get("/post", (req, res) => {
   res.render("admin/post");
