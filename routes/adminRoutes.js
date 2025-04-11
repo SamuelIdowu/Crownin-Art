@@ -3,10 +3,10 @@ const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const notifier = require("node-notifier");
 
-// // Login Page (GET)
-// router.get("/login", (req, res) => {
-//   res.render("admin/login");
-// });
+// Login Page (GET)
+router.get("/login", (req, res) => {
+  res.render("admin/login");
+});
 
 // Login Page (POST)
 router.post(
@@ -42,15 +42,15 @@ router.post(
   }
 );
 
-// // Admin Dashboard
-// router.get("/admin-page", (req, res) => {
-//   res.render("admin/admin-page");
-// });
+// Admin Dashboard
+router.get("/admin-page", (req, res) => {
+  res.render("admin/admin-page");
+});
 
-// // Post Artwork Page
-// router.get("/post", (req, res) => {
-//   res.render("admin/post");
-// });
+// Post Artwork Page
+router.get("/post", (req, res) => {
+  res.render("admin/post");
+});
 
 // Submit Artwork
 router.post("/send-artwork", (req, res) => {
