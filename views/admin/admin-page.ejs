@@ -122,7 +122,7 @@
                     <td><%= index + 1 %></td>
                     <td>
                       <img
-                        src="<%= item.image %>"
+                        src="/catalogue/image/<%= item._id %>/0"
                         alt="<%= item.title %>"
                         class="item-image"
                       />
@@ -168,7 +168,7 @@
                     <td><%= index + 1 %></td>
                     <td>
                       <img
-                        src="<%= item.image %>"
+                        src="/listings/image/<%= item._id %>/0"
                         alt="<%= item.title %>"
                         class="item-image"
                       />
@@ -201,7 +201,7 @@
             <div class="gallery-grid" id="gallery-items">
               <% gallery.forEach((item) => { %>
               <div class="gallery-item">
-                <img src="<%= item.image %>" alt="<%= item.title %>" />
+                <img src="/gallery/image/<%= item._id %>/0" alt="<%= item.title %>" />
                 <div class="gallery-item-actions">
                   <button class="edit-btn"><i class="fas fa-edit"></i></button>
                   <button
