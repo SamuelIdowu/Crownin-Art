@@ -288,7 +288,8 @@ h1 {
   }
   .logo {
     float: left;
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: .5rem;
   }
   .nav {
     display: flex;
@@ -314,6 +315,9 @@ h1 {
     margin: 1rem;
     width: 93%;
   }
+  main p {
+    font-size: 20px;
+}
   h1 {
     font-size: 3rem;
   }
