@@ -37,63 +37,7 @@ main p {
 }
 
 
-@media (max-width: 768px) {
-  header {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
-    color: #fff;
-    margin: 10px;
-    width: calc(100% - 20px);
-  }
-
-  .logo {
-    float: left;
-    font-size: clamp(24px, 5vw, 30px);
-    margin-top: 0.5rem;
-  }
-
-  main {
-    padding: 60px 20px 20px;
-  }
-
-  h1 {
-    font-size: clamp(2rem, 6vw, 3rem);
-    letter-spacing: 0.1em;
-  }
-
-  nav ul li a {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    margin: 5px;
-    width: calc(100% - 10px);
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  main p {
-    font-size: 16px;
-  }
-
-  h1 {
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    letter-spacing: 0.05em;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-  }
-}:root {
+:root {
   --primary-color: #333;
   --bg-color: #e0e0e0;
 }
@@ -360,6 +304,19 @@ h1 {
   }
 }
 @media (max-width: 768px) {
+
+  main {
+    padding: 60px 20px 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
   nav ul {
     flex-direction: column;
     align-items: flex-end;
@@ -413,9 +370,6 @@ h1 {
   main p {
     font-size: 20px;
 }
-  h1 {
-    font-size: 3rem;
-  }
 
   .year {
     font-size: 1.2rem;
@@ -423,8 +377,27 @@ h1 {
 }
 
 @media (max-width: 480px) {
+
+  header {
+    margin: 5px;
+    width: calc(100% - 10px);
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
   h1 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    letter-spacing: 0.05em;
+  }
+
+  nav ul li a {
+    font-size: 16px;
   }
   .year {
     font-size: 1rem;
