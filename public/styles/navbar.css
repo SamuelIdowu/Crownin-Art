@@ -220,6 +220,7 @@ ul li {
   }
   header {
     float: left;
+    margin-top: .5rem;
   }
   .logo {
     font-size: 30px;

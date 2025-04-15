@@ -2,15 +2,6 @@ body{
   font-family:cursive;
   overflow-x: hidden;
 }
-.typing {
-    font-family: monospace;
-    border-right: 3px solid black;
-    white-space: normal;
-    width: 100%;
-    max-width: 100%;
-    display: inline-block;
-    animation: typing 5s steps(20, end), blink 0.4s step-end infinite;
-  }
   
 /* Page Load Animations */
 .nav header {
@@ -98,11 +89,11 @@ main p,
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     color: #fff; 
 }
-.unifrakturmaguntia-regular {
+/* .unifrakturmaguntia-regular {
   font-family: "UnifrakturMaguntia", cursive;
   font-weight: 400;
   font-style: normal;
-}  
+}   */
 
 button{
   cursor: pointer;
