@@ -1,5 +1,4 @@
 body{
-  font-family:cursive;
   overflow-x: hidden;
 }
   
@@ -89,11 +88,6 @@ main p,
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     color: #fff; 
 }
-/* .unifrakturmaguntia-regular {
-  font-family: "UnifrakturMaguntia", cursive;
-  font-weight: 400;
-  font-style: normal;
-}   */
 
 button{
   cursor: pointer;
