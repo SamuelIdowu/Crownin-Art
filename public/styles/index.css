@@ -368,7 +368,12 @@ h1 {
     width: 93%;
   }
   main p {
-    font-size: 30px;
+    font-size: 40px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  letter-spacing: 0.05em;
 }
 
   .year {
@@ -387,14 +392,6 @@ h1 {
     font-size: 20px;
   }
 
-  main p {
-    font-size: 20px;
-  }
-
-  h1 {
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    letter-spacing: 0.05em;
-  }
 
   nav ul li a {
     font-size: 16px;
