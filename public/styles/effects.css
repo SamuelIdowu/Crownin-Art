@@ -1,5 +1,8 @@
 body{
   overflow-x: hidden;
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
   
 /* Page Load Animations */
@@ -92,3 +95,4 @@ main p,
 button{
   cursor: pointer;
 }
+
