@@ -16,7 +16,7 @@ body {
   padding: 0;
 }
 .content {
-  margin: 0 5rem 5rem 5rem;
+  
   display: flex;
   flex-direction: column;
   position: relative;
@@ -87,10 +87,17 @@ body {
   padding: 1rem;
 }
 
+@media (min-width: 768px) {
+  .content {
+    margin: 0 5rem 5rem 5rem;
+  }
+  
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .content{
-    margin-top: 5rem;
+    margin: 5rem 1rem 0rem 1rem;
   }
   .art-gallery {
     grid-template-columns: 1fr;

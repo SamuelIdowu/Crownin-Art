@@ -12,7 +12,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 
-router.post("/send-artwork/submit", upload.array("listingImages"), (req, res, next) => {
+router.post("/submit", upload.array("listingImages"), (req, res, next) => {
   console.log("Received listing submission");
   processListingData(req, res).catch(next);
 });
