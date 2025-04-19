@@ -434,6 +434,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .container{
+    font-size: .7rem;
+  }
   .dashboard-stats {
     grid-template-columns: 1fr;
   }

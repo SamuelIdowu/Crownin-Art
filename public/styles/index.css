@@ -376,6 +376,9 @@ h1 {
 }
 
 @media (max-width: 480px) {
+  main{
+    font-size: .5rem;
+  }
 
   header {
     margin: 5px;
